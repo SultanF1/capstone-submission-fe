@@ -1,5 +1,5 @@
-import { checkURL } from './js/urlChecker'
-import { handleSubmit, onBlur,makeCall} from './js/formHandler'
+import { postData,retrieveData } from './js/app'
+import { handleSubmit, saveTrip,getLocation,getWeather,getPicture} from './js/formHandler'
 
 
 import './styles/resets.scss'
@@ -9,10 +9,7 @@ import './styles/form.scss'
 import './styles/header.scss'
 
 
-
-
-
-export{checkURL,handleSubmit,onBlur,makeCall}
+export{postData,retrieveData,handleSubmit,saveTrip,getLocation,getWeather,getPicture}
 
 
 

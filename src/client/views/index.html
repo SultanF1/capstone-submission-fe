@@ -13,36 +13,29 @@
     </head>
 
     <body>
-
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
+        <h1>Travel Planner</h1>
+        
 
         <main>
             <section>
                 <form class="" onsubmit="return handleSubmit('click')">
-                    <input id="url" type="text" name="input" value="" onblur="Client.onBlur()" placeholder="URL">
-                    <input id="text" type="text" name="text" value="" onblur="Client.onBlur()" placeholder="Text to be analyzed">
+                    <input id="City" type="text" name="input" value="paris"  placeholder="City">
+                    <input id="date" type="text" name="text" value=""  placeholder="Departure date m/d/y">
                     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
             </section>
 
-            <section>
-                <strong>URL:</strong>
-                <div id="results"></div>
-                <strong>Semantics:</strong>
-                <div id="semantics"></div>
-            </section>
+            
         </main>
-
-        <footer>
-            <p>This is a footer</p>
-        </footer>
+        <div class="container">
+            <div class="picture">
+                <img id="image">
+            </div>
+            <div id = 'destination' class="data"></div>
+            <button type="button" class="rest" onclick="Client.saveTrip()">Save trip</button>
+            <div class="weather" id ='weather'></div>
+          </div>
+    
         <script>
             // Check that service workers are supported
             if ('serviceWorker' in navigator) {

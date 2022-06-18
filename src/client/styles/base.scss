@@ -12,3 +12,37 @@ section {
     max-width: 800px;
     margin: 50px auto;
 }
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+.container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1.2fr 0.8fr; 
+    gap: 1em 1em; 
+    grid-template-areas: 
+      "picture data"
+      "rest weather"; 
+    justify-content: center; 
+    justify-items: center; 
+    background-color: pink;
+  }
+  .picture {
+    justify-self: end; 
+    grid-area: picture; 
+  }
+  .data {
+    justify-self: start; 
+    grid-area: data; 
+    font-size: 2em;
+  }
+  .weather {
+    justify-self: start; 
+    grid-area: weather; 
+  }
+  .rest {
+    justify-self: end; 
+    grid-area: rest; 
+  }
