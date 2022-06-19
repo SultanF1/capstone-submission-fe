@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --detectOpenHandles  --coverage --forceExit",
     "start": "node src/server/server.js",
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack-dev-server  --config webpack.dev.js --open"

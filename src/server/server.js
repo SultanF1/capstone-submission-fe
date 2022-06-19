@@ -1,4 +1,4 @@
-projectData = {city:'paris',date:'5/22/2022'}
+let projectData = {city:'paris',date:'5/22/2022'}
 
 var path = require('path')
 const express = require('express')
@@ -39,5 +39,7 @@ app.post('/add', callBack);
 
 function callBack(req,res){
     res.send(req.body)
-  projectData = req.body;
+    projectData = req.body;
 };
+
+module.exports = {callBack}
