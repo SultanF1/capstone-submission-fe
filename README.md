@@ -1,10 +1,13 @@
 # Project description
-this is test for a natural language processing app, you should be able to enter any text and get the semantic analysis for it.
+this is the capstone project for the fe course, it's a travel app.
 
 # How to run
 
 to run you can use the command : npm run start
 
-# API used 
+# APIs used 
 
-used the meaningcloud API, the keys are not in this repo
+1- geonames
+2- restcountries
+3- pixabay
+4- weatherbit

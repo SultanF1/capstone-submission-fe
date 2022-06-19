@@ -1,5 +1,5 @@
 import { postData, retrieveData } from "./app";
-
+// get the lat, lon, and country from the geonames api
 const getLocation = async function(city,date){
       
     let username = 'sultan_razin';
@@ -24,7 +24,7 @@ const getLocation = async function(city,date){
         console.log(error);
     }
 }
-
+// get information about the country using the restcountries api
 const getCountryData = async function(country){
     const res = await fetch('https://restcountries.com/v3.1/name/'+country+'?fullText=true')
     const text = await res.json()
@@ -42,9 +42,11 @@ let d = new Date();
 let newDate = d.getMonth()+'/'+ d.getDate()+'/'+ d.getFullYear();
 const APIkey = '25a210406282456bbdec4d7e53be57bb';
 
+// get the weather forecast using the weatherbit api
 const getWeather = async function(lat,lon,date){
     
-    
+    // if it's in 7 days or less will serve the current weather
+    // if it's in more than 7 days will serve the forecast for that specific day
     const diffTime = Math.abs(new Date(date) - new Date(newDate));
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
     if (diffDays > 7){
@@ -70,7 +72,7 @@ const getWeather = async function(lat,lon,date){
     }
 }
 
-
+// search pixabay library of pics for a picture of the destination
 const getPicture = async function(city){
     const res = await fetch('https://pixabay.com/api/?key=28131651-a8dc699f2fa4c50ecfd2f812e&q='+city+'&image_type=photo&pretty=true');
     const text = await res.json();
@@ -84,7 +86,8 @@ const getPicture = async function(city){
         console.log(error);
     }
 }
-
+// this method will be called when the submit button is clicked
+// it'll call the rest of the methods and change the UI
 const handleSubmit = async function(event) {
     event.preventDefault();
     
@@ -104,7 +107,8 @@ const handleSubmit = async function(event) {
     
     
     
-
+// this method will be called when the save trip button is clicked
+// it'll invoke the postData func in the app.js
 function saveTrip(){
     let formText = document.getElementById('City').value
     let date = document.getElementById('date').value

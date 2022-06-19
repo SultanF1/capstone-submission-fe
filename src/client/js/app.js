@@ -1,4 +1,4 @@
-
+// get the new trip data and send it to the server where it'll be stored
 const postData = async ( url = '', data = {})=>{
     
     const response = await fetch(url, {
@@ -19,7 +19,7 @@ const postData = async ( url = '', data = {})=>{
     }
 };
 
-
+// get the latest trip data from the server
 const retrieveData = async () =>{
     const request = await fetch('/all');
     try {

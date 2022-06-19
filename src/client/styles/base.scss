@@ -17,6 +17,29 @@ h1 {
     display: flex;
     justify-content: center;
 }
+@media only screen and (max-width: 1300px){
+  .container {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1.2fr 0.8fr 1fr 1fr; 
+    gap: 1em 1em; 
+    grid-template-areas: 
+      "picture"
+      "data"
+      "rest"
+      "weather"; 
+    justify-content: center; 
+    justify-items: center; 
+    background-color: pink;
+  }
+  .picture { grid-area: picture; }
+  .data { grid-area: data; }
+  .rest { grid-area: rest; }
+  .weather { grid-area: weather; }
+}
+
+
+@media only screen and (min-width: 1301px){
 .container {
     display: grid; 
     grid-template-columns: 1fr 1fr; 
@@ -46,3 +69,4 @@ h1 {
     justify-self: end; 
     grid-area: rest; 
   }
+}
